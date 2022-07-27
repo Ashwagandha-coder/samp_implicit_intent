@@ -25,7 +25,13 @@ public class MainActivity extends AppCompatActivity {
     public void onClickOpenMapButton(View view) {
 
         Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse("geo:48.858775,2.294470"));
+
+        Uri adressUri = Uri.parse("geo:0,0")
+                .buildUpon()
+                .appendQueryParameter("q","Тверская улица, 1")
+                .build();
+
+        intent.setData(adressUri);
 
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
@@ -35,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void yourOwnImplicitIntent(View view) {
 
+        String tel = "(212) 555 1212";
+
+        dialPhoneNumber(tel);
 
     }
 
@@ -46,4 +55,13 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+    public void dialPhoneNumber(String phoneNumber) {
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:" + phoneNumber));
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
+
 }

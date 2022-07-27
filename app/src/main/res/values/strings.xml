@@ -2,5 +2,5 @@
     <string name="app_name">Implicit_Intent_App</string>
     <string name="open_web_site">open web site</string>
     <string name="open_map">open map</string>
-    <string name="open_some_app">open some app</string>
+    <string name="open_tel_dial">open tel dial</string>
 </resources>

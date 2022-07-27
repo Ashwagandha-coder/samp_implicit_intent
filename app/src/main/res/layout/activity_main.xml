@@ -28,6 +28,6 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:onClick="yourOwnImplicitIntent"
-        android:text="@string/open_some_app"/>
+        android:text="@string/open_tel_dial"/>
 
 </LinearLayout>
