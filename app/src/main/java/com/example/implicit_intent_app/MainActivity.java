@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     public void onClickOpenMapButton(View view) {
 
         Intent intent = new Intent(Intent.ACTION_VIEW);
