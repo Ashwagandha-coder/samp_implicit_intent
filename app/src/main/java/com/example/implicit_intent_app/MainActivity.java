@@ -24,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickOpenMapButton(View view) {
 
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("geo:48.858775,2.294470"));
+
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+
     }
 
     public void yourOwnImplicitIntent(View view) {
